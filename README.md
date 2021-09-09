@@ -55,7 +55,7 @@ Also, set in your lambda role the permission for access your S3 bucket.
 ### Locally Tests
 
 For do the tests you need to change event.json with a valid event data.
-For locally tests you need have access to S3 bucket with aws-sdk, you can use ``` aws configur ```
+For locally tests you need have access to S3 bucket with aws-sdk, you can use ``` aws configure ```
 
 ```
 $ export SPLUNK_HEC_URL=
