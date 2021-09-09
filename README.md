@@ -1,16 +1,16 @@
-# aws-s3-logs-splunk
+## aws-s3-logs-splunk
 
-## AWS Lambda Function that send S3 logs to Splunk
+### AWS Lambda Function that send S3 logs to Splunk
 
 
-### Enviroments
+#### Enviroments
 
-SPLUNK_HEC_URL="Your splunk HEC"
+SPLUNK_HEC_URL="Your splunk HEC"<br />
 SPLUNK_HEC_TOKEN="Your splunk Token"
 
 
 
-### Bucket Policy
+#### Bucket Policy
 ```
 {
     "Sid": "PolicyForLambda",
@@ -23,7 +23,7 @@ SPLUNK_HEC_TOKEN="Your splunk Token"
 }
 ```
 
-### Permission in Lambda Role
+#### Permission in Lambda Role
 ```
 {
     "Version": "2012-10-17",
