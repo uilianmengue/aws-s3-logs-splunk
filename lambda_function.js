@@ -45,7 +45,7 @@ exports.handler = (event, context, callback) => {
             console.log(`Retrieved access log: LastModified="${data.LastModified}" ContentLength=${data.ContentLength}`);
             const payload = data.Body;
 
-            zlib.gunzip(payload, (error, result) => { // eslint-disable-line no-shadow
+            zlib.gunzip(payload, (error, result) => {
                 if (error) {
                     console.log(error);
                     callback(error);
@@ -74,7 +74,7 @@ exports.handler = (event, context, callback) => {
             callback(error);
         } else {
             console.log(`Response from Splunk:\n${response}`);
-            callback(null, event.key1); // Echo back the first key value
+            callback(null, event.key1);
         }
     });
 };
