@@ -1,14 +1,13 @@
-## aws-s3-logs-splunk
-
 ### AWS Lambda Function that send S3 logs to Splunk
 
+### How it works
+
+The lambda function receive the bucket event 
 
 #### Enviroments
 
 SPLUNK_HEC_URL="Your splunk HEC"\
 SPLUNK_HEC_TOKEN="Your splunk Token"
-
-
 
 #### Bucket Policy
 ```
@@ -36,4 +35,17 @@ SPLUNK_HEC_TOKEN="Your splunk Token"
         }
     ]
 }
+```
+
+
+### Locally Tests
+
+For do teh tests you need to change event.json with a valid event data.
+
+```
+$ export SPLUNK_HEC_URL=
+$ export SPLUNK_HEC_TOKEN=
+$ npm install 
+$ npm run test
+
 ```
