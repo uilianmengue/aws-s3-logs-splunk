@@ -5,7 +5,7 @@
 
 #### Enviroments
 
-SPLUNK_HEC_URL="Your splunk HEC"__
+SPLUNK_HEC_URL="Your splunk HEC"_
 SPLUNK_HEC_TOKEN="Your splunk Token"
 
 
