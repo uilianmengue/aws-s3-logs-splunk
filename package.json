@@ -1,0 +1,25 @@
+{
+  "name": "aws-s3-logs-splunk",
+  "version": "1.0.0",
+  "description": "AWS Lambda Function that send S3 logs to Splunk",
+  "main": "lambda_function.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "node -e \"console.log(require('./lambda_function').handler(require('./event/event.json')));\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uilianmengue/aws-s3-logs-splunk.git"
+  },
+  "author": "Uilian Mengue",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uilianmengue/aws-s3-logs-splunk/issues"
+  },
+  "homepage": "https://github.com/uilianmengue/aws-s3-logs-splunk#readme",
+  "dependencies": {
+    "aws-sdk": "^2.985.0"
+  }
+}
