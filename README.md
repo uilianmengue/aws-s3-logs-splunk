@@ -20,7 +20,7 @@ SPLUNK_HEC_TOKEN="Your splunk Token"
 
 #### Bucket Policy
 
-Set the bucket policy below for permit lambda function to access your file.
+Set the bucket policy below for permit lambda function to access your files in S3 Bucket.
 
 ```
 {
@@ -36,7 +36,7 @@ Set the bucket policy below for permit lambda function to access your file.
 
 #### Permission in Lambda Role
 
-Also, set in your lambda role the permission for access the bucket.
+Also, set in your lambda role the permission for access your S3 bucket.
 
 ```
 {
@@ -52,10 +52,10 @@ Also, set in your lambda role the permission for access the bucket.
 }
 ```
 
-
 ### Locally Tests
 
 For do the tests you need to change event.json with a valid event data.
+For locally tests you need have access to S3 bucket with aws-sdk, you can use ``` aws configur ```
 
 ```
 $ export SPLUNK_HEC_URL=
