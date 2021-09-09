@@ -1,4 +1,4 @@
-### AWS Lambda Function that send S3 logs to Splunk
+### AWS Lambda Function to send your S3 logs to Splunk
 
 ### How it works
 
