@@ -2,14 +2,26 @@
 
 ### How it works
 
-The lambda function receive the bucket event 
+The lambda function receive the from the bucket the event of the file created.
+This event contain the bucket name and file path, the function get this file, parser and send your content for Splunk.
 
-#### Enviroments
+### Deploy
+
+#### Trigger
+
+You need to add a new trigger in lambda function, you have to choose a S3 Bucket, choose your bucket name and choose "All object create events".
+
+#### Environments
+
+You need to set the Environments below.
 
 SPLUNK_HEC_URL="Your splunk HEC"\
 SPLUNK_HEC_TOKEN="Your splunk Token"
 
 #### Bucket Policy
+
+Set the bucket policy below for permit lambda function to access your file.
+
 ```
 {
     "Sid": "PolicyForLambda",
@@ -23,6 +35,9 @@ SPLUNK_HEC_TOKEN="Your splunk Token"
 ```
 
 #### Permission in Lambda Role
+
+Also, set in your lambda role the permission for access the bucket.
+
 ```
 {
     "Version": "2012-10-17",
@@ -40,7 +55,7 @@ SPLUNK_HEC_TOKEN="Your splunk Token"
 
 ### Locally Tests
 
-For do teh tests you need to change event.json with a valid event data.
+For do the tests you need to change event.json with a valid event data.
 
 ```
 $ export SPLUNK_HEC_URL=
